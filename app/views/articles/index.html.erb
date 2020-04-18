@@ -1,0 +1,14 @@
+<h1><%= 'Wikinimous'%></h1>
+
+
+<h4><%= link_to "+ Add new article", new_article_path %><h4>
+
+<% @articles.each do |t|  %>
+  <div class="flexbox">
+    <li>
+    <h5><%= link_to t.title, article_path(t) %></h5>
+  </li>
+  </div>
+
+<% end %>
+
